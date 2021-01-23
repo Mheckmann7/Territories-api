@@ -5,14 +5,24 @@ const SALT_ROUNDS = 6;
 
 
 const userSchema = new Schema({
-    firstName: String,
-    lastName: String, 
+    username: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+    minlength: 3 
+    },
     email: {
         type: String,
         unique: true,
         lowercase: true 
     },
-    password: String
+    password: String,
+    // markers: [{
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'Area'
+    
+    // }]
 }, { timestamps: true });
 
 userSchema.set('toJSON', {
