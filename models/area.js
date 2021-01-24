@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 const User = require('./user');
 
 const areaSchema = new Schema({
+    username: String, 
     // userId: {
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'User'
