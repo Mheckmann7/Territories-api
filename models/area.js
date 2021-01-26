@@ -4,13 +4,9 @@ const User = require('./user');
 
 const areaSchema = new Schema({
     username: String, 
-    // userId: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'User'
-    // }, //reference the player that is logged in 
     lat: Number,
     lng: Number,
-    time: Date
+    time: Date,
     
 }, { timestamps: true });
 
